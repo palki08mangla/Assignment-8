@@ -1,0 +1,52 @@
+<%- include("../partials/header") %> 
+<%- include("../partials/navbar") %> 
+
+<main>
+
+    <h1 class="display-5">GUESTS</h1>
+
+    <div class="table-responsive ">
+        <table class="table table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Phone</th>
+                    <th>E-Mail</th>
+                    <th>Check-In</th>
+                    <th>Check-Out</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for(let guest of guests){ %> 
+                    <tr>
+                      <td><%=guest.name%></td>
+                      <td><%=guest.age%></td>
+                      <td><%=guest.phone%></td>
+                      <td><%=guest.mail%></td>
+                      <td><%=guest.checkin%></td>
+                      <td><%=guest.checkout%></td>
+                      <td>
+                        <form action="/guests/<%=guest._id%>/edit?_method=PATCH" method="POST">
+                            <div class="mb-3">
+                                <button class="btn btn-primary btn-sm">CHECK OUT</button>
+                            </div>
+                         </form>
+                     
+                        <form action="/guests/<%=guest._id%>?_method=DELETE" method="POST">
+                            <div class="mb-3">
+                                <button class="btn btn-danger btn-sm">REMOVE ENTRY</button>
+                            </div>
+                         </form>
+                      </td>
+                       </tr>
+                    <%}%>
+            </tbody>
+        </table>
+    </div>
+
+
+</main>
+
+
+<%- include("../partials/footer") %> 

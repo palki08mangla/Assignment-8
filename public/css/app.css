@@ -1,0 +1,16 @@
+:root{
+    --main-color:#0096c7;
+}
+
+.navbar{
+    background-color: var(--main-color);
+}
+
+main{
+    margin-top:4.5rem;
+    margin-left:1rem;
+    margin-right:1rem;
+
+}
+
+

@@ -1,0 +1,46 @@
+<%- include("../partials/header") %> 
+<%- include("../partials/navbar") %> 
+
+
+<main class="container">
+
+    <div class="row">
+        <div class="col-md-6 mx-auto">
+            <h1 class="display-6">New Guest</h1>
+            <form action="/guests" method="POST">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" name="name" id="name" placeholder="Name">
+                </div>
+                <div class="mb-3">
+                    <label for="age" class="form-label">Age</label>
+                    <input class="form-control" type="text" name="age" id="age" placeholder="Age">
+                </div>
+                <div class="mb-3">
+                    <label for="phone" class="form-label">Phone</label>
+                        <input type="text" name="phone" id="phone" class="form-control" placeholder="Phone Number">
+                </div>
+                <div class="mb-3">
+                    <label for="mail" class="form-label">E-mail</label>
+                        <input type="email" name="mail" id="mail" class="form-control" placeholder="email">
+                </div>
+
+                <div class="mb-3">
+                    <label for="checkin" class="form-label">Check-In</label>
+                        <input type="datetime-local" name="checkin" id="checkin" class="form-control" >
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-small">Submit</button>
+            </form>
+
+        </div>
+    </div>
+
+
+
+
+</main>
+
+
+
+<%- include("../partials/footer") %> 
